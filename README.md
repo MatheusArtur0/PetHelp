@@ -1,6 +1,5 @@
 <div text align="center">
 
-# PetHelp
 <img src="images/logo.png">
 
 ## Resumo
