@@ -1,7 +1,7 @@
 <div text align="center">
 
 # PetHelp
-<img src="imagens/logo.png">
+<img src="images/logo.png">
 
 ## Resumo
 
