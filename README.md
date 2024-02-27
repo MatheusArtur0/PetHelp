@@ -15,27 +15,27 @@ Visamos objetivar um aplicativo chamado **"Pet Help"** que visa oferecer as fun�
 
 ## Etapas do desenvolvimento 
 
-- [X] 1° Apresentação em sala
-- [ ] Prototipação do aplicativo 
-- [ ] Tela de apresentação do aplicativo
-- [ ] Tela de login / esqueci a senha
-- [ ] Tela de registro (usuário e colaborador)
-- [ ] Vincular a aplicação com banco de dados 
-- [ ] Criar uma autenticação de acesso 
-- [ ] Tela de acesso inicial (Após o login)
+- [X] 1° Apresentação em sala;
+- [ ] Prototipação do aplicativo;
+- [ ] Tela de apresentação do aplicativo;
+- [ ] Tela de login / esqueci a senha;
+- [ ] Tela de registro (usuário e colaborador);
+- [ ] Vincular a aplicação com banco de dados;
+- [ ] Criar uma autenticação de acesso;
+- [ ] Tela de acesso inicial (Após o login);
 ...
 
 ## Componentes
 
 Ordem | Nome | Matrícula
 
-1 - Giovanna Laranjeira | 01606692
-2 - Henrique Márcio Silva da Hora | 01371100
-3 - José Gabriel Gadiolli Lourenço da Paixão | 01603195
-4 - Luís Fernando de Oliveira Silva | 01595802
-5 - Matheus Artur da Silva Santos | 01573682
-6 - Matheus José dos Santos Silva | 01597670
-7 - Rebecca Costa Florêncio Wanderley | 0159073
+1. Giovanna Laranjeira | 01606692;
+2. Henrique Márcio Silva da Hora | 01371100;
+3. José Gabriel Gadiolli Lourenço da Paixão | 01603195;
+4. Luís Fernando de Oliveira Silva | 01595802;
+5. Matheus Artur da Silva Santos | 01573682;
+6. Matheus José dos Santos Silva | 01597670;
+7. Rebecca Costa Florêncio Wanderley | 0159073.
 
 ## Referências
 
