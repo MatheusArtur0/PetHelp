@@ -1,38 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import * as React from 'react';
+import { StatusBar } from 'react-native';
+
+import {NavigationContainer} from '@react-navigation/native'
+import Routes from './src/routes'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.formTitle}>PET HELP</Text>
-      <TextInput style={styles.formInput}
-      placeholder = "Informe o E-mail"
-      keyboardType = "E-mail address"
-      autoCapitalize = "none"
-      autoComplete = "E-mail"
-      />
-      <TextInput style={styles.formInput}/>
-      <Pressable style={styles.formButton}>
-        <Text style={styles.textButton}>Entrar</Text>
-      </Pressable>
-      <View style={styles.subContainer}>
-        <Pressable style={styles.subButton}>
-          <Text style={styles.subTextButton}>Esqueci a senha</Text>
-        </Pressable>
-        <Pressable style={styles.subButton}>
-          <Text style={styles.subTextButton}>Cadastrar</Text>
-        </Pressable>
-
-      </View>
-    </View>
+    <NavigationContainer>
+      <StatusBar backgroundColor="#294B29"/>
+      <Routes/>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
