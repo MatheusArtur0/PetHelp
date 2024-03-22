@@ -11,7 +11,7 @@ import * as Animatable from 'react-native-animatable'
 
 import {useNavigation} from '@react-navigation/native'
 
-export default function SignIn() {
+export default function Register() {
     const navigation = useNavigation();
 
     return (
@@ -25,29 +25,34 @@ export default function SignIn() {
         
         <View style={styles.container}>
             <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
-                <Text style={styles.message}> Bem-vindo (a) </Text>
+                <Text style={styles.message}> Cadastre-se </Text>
             </Animatable.View>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title}>Email</Text>
-                <TextInput
-                    placeholder="Digite um email..."
-                    style={styles.input} />
+                <Text style={styles.title}>Email de acesso</Text>
+                    <TextInput
+                        placeholder="Digite um email..."
+                        style={styles.input} />
 
-                    <Text style={styles.title}>Senha</Text>
+                <Text style={styles.title}>Senha</Text>
                     <TextInput
                         placeholder="Sua senha"
                         style={styles.input} />
 
+                <Text style={styles.title}>Número para contato</Text>
+                    <TextInput
+                        placeholder="Ex: (55) 0 1234-5678"
+                        style={styles.input} />
+
                     <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>Acessar</Text>
+                        <Text style={styles.buttonText}>Cadastrar</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity 
                     style={styles.buttonRegister}
-                    onPress={() => navigation.navigate('Register')}
+                    onPress={() => navigation.navigate('SignIn')}
                     >
-                        <Text style={styles.registerText}>Não possui uma conta? Cadastre-se</Text>
+                        <Text style={styles.registerText}>Já possui uma conta? Acesse já!</Text>
                     </TouchableOpacity>
 
                 </Animatable.View>

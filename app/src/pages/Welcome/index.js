@@ -7,6 +7,8 @@ import {
     TouchableOpacity
 } from 'react-native';
 
+import { StatusBar } from 'react-native';
+
 import * as Animatable from 'react-native-animatable'
 
 import {useNavigation} from '@react-navigation/native'
@@ -16,12 +18,37 @@ export default function Welcome() {
 
     return (
         <View style={styles.container}>
+
+            <View style={styles.language}>
+                <TouchableOpacity
+                onPress={ () => {} }
+                style={[
+                    styles.langButton, {
+                        borderColor: 'FFFF'
+                    }
+                ]}
+                >
+                    <Text style={styles.langText}>Inglês</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                onPress={ () => {} }
+                style={[
+                    styles.langButton, {
+                        borderColor: 'FFFF'
+                    }
+                ]}
+                >
+                    <Text style={styles.langText}>Português (Brasil)</Text>
+                </TouchableOpacity>
+            </View>
+
         
             <View style={styles.containerLogo}>
                 <Animatable.Image
                     animation="flipInY"
                     source={require('../../assets/logo.png')}
-                    style={{ width: '100%' }}
+                    style={{ width: '60%' }}
                     resizeMode="contain"
                 />
             </View>
@@ -48,11 +75,33 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor: '#294B29'
     },
+    languages:{
+        flexDirection: 'row',
+        alignSelf:'center',
+
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        top: StatusBar.currentHeight ? StatusBar.currentHeight + 18 : StatusBar.currentHeight + 58,
+    },
+    langButton:{
+        borderWidth: 1,
+        padding: 4,
+        borderRadius: 4,
+        marginRight: 4, 
+        marginLeft: 4,
+    },
+    langText:{
+        marginRight: 4,
+        marginLeft: 4,
+        color: '#FFF'
+    },
     containerLogo:{
-        flex:2,
+        flex: 2,
         backgroundColor: '#294B29',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+
     },
     containerForm: {
         flex: 1, 
