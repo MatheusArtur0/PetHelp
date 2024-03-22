@@ -101,7 +101,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#294B29',
         justifyContent: 'center',
         alignItems: 'center',
-
     },
     containerForm: {
         flex: 1, 
