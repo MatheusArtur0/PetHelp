@@ -13,18 +13,28 @@ import * as Animatable from 'react-native-animatable'
 
 import {useNavigation} from '@react-navigation/native'
 
+import i18n from "../../utils/i18n";
+import { useTranslation } from "react-i18next";
+
 export default function Welcome() {
     const navigation = useNavigation();
+    const {t, i18n} = useTranslation();
+
+    const changeLanguage = value => {
+        i18n.changeLanguage(value)
+    }
 
     return (
         <View style={styles.container}>
 
             <View style={styles.language}>
                 <TouchableOpacity
-                onPress={ () => {} }
+                onPress={ () => changeLanguage('en') }
                 style={[
                     styles.langButton, {
-                        borderColor: 'FFFF'
+                        borderColor: 'FFFF',
+                        borderRadius: 50,
+                        width: '40%'
                     }
                 ]}
                 >
@@ -32,10 +42,12 @@ export default function Welcome() {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                onPress={ () => {} }
+                onPress={ () => changeLanguage('pt') }
                 style={[
                     styles.langButton, {
-                        borderColor: 'FFFF'
+                        borderColor: 'FFFF',
+                        borderRadius: 50,
+                        width: '40%'
                     }
                 ]}
                 >
@@ -54,14 +66,14 @@ export default function Welcome() {
             </View>
 
             <Animatable.View delay={800} animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title}>"Na jornada da adoção, não apenas salvamos vidas, mas também encontramos nossa própria redenção. Adote um animal e escreva uma história de amor e compaixão que ecoará para sempre."</Text>
-                <Text style={styles.text}>Faça o login para começar essa nova história!</Text>
+                <Text style={styles.title}>{t('Na jornada da adoção, não apenas salvamos vidas, mas também encontramos nossa própria redenção. Adote um animal e escreva uma história de amor e compaixão que ecoará para sempre.')}</Text>
+                <Text style={styles.text}>{t('Faça o login para começar essa nova história!')}</Text>
 
                 <TouchableOpacity 
                 style={styles.button}
                 onPress={() => navigation.navigate('SignIn')}
                 >
-                    <Text style={styles.buttonText}>Acessar</Text>
+                    <Text style={styles.buttonText}>{t('Acessar')}</Text>
                 </TouchableOpacity>
             </Animatable.View>
 

@@ -11,8 +11,16 @@ import * as Animatable from 'react-native-animatable'
 
 import {useNavigation} from '@react-navigation/native'
 
+import i18n from "../../utils/i18n";
+import { useTranslation } from "react-i18next";
+
 export default function SignIn() {
     const navigation = useNavigation();
+    const {t, i18n} = useTranslation();
+
+    const changeLanguage = value => {
+        i18n.changeLanguage(value)
+    }
 
     return (
         <><View style={styles.containerLogo}>
@@ -24,30 +32,60 @@ export default function SignIn() {
         </View>
         
         <View style={styles.container}>
+
+            
+        <View style={styles.language}>
+                <TouchableOpacity
+                onPress={ () => changeLanguage('en') }
+                style={[
+                    styles.langButton, {
+                        borderColor: 'FFFF',
+                        borderRadius: 50,
+                        width: '40%'
+                    }
+                ]}
+                >
+                    <Text style={styles.langText}>Inglês</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                onPress={ () => changeLanguage('pt') }
+                style={[
+                    styles.langButton, {
+                        borderColor: 'FFFF',
+                        borderRadius: 50,
+                        width: '40%'
+                    }
+                ]}
+                >
+                    <Text style={styles.langText}>Português (Brasil)</Text>
+                </TouchableOpacity>
+            </View>
+
             <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
-                <Text style={styles.message}> Bem-vindo (a) </Text>
+                <Text style={styles.message}> {t('Bem-vindo')} (a) </Text>
             </Animatable.View>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title}>Email</Text>
+                <Text style={styles.title}>{t('Email')}</Text>
                 <TextInput
-                    placeholder="Digite um email..."
+                    placeholder={t('Digite um email...')}
                     style={styles.input} />
 
-                    <Text style={styles.title}>Senha</Text>
+                    <Text style={styles.title}>{t('Senha')}</Text>
                     <TextInput
-                        placeholder="Sua senha"
+                        placeholder={t('Sua senha')}
                         style={styles.input} />
 
                     <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>Acessar</Text>
+                        <Text style={styles.buttonText}>{t('Acessar')}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity 
                     style={styles.buttonRegister}
                     onPress={() => navigation.navigate('Register')}
                     >
-                        <Text style={styles.registerText}>Não possui uma conta? Cadastre-se</Text>
+                        <Text style={styles.registerText}>{t('Não possui uma conta? Cadastre-se')}</Text>
                     </TouchableOpacity>
 
                 </Animatable.View>
@@ -115,5 +153,17 @@ const styles = StyleSheet.create({
     },
     registerText:{
         color: '#a1a1a1'
+    },
+    langButton:{
+        borderWidth: 1,
+        padding: 4,
+        borderRadius: 4,
+        marginRight: 4, 
+        marginLeft: 4,
+    },
+    langText:{
+        marginRight: 4,
+        marginLeft: 4,
+        color: '#FFF'
     }
 })

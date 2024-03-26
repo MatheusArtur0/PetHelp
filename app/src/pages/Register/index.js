@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useTransition } from "react";
 import {View,
         Text, 
         StyleSheet,
@@ -11,8 +11,12 @@ import * as Animatable from 'react-native-animatable'
 
 import {useNavigation} from '@react-navigation/native'
 
-export default function Register() {
+import i18n from "../../utils/i18n";
+import { useTranslation } from "react-i18next";
+
+export default function Register() {w
     const navigation = useNavigation();
+    const {t, i18n} = useTranslation();
 
     return (
         <><View style={styles.containerLogo}>
@@ -25,34 +29,34 @@ export default function Register() {
         
         <View style={styles.container}>
             <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
-                <Text style={styles.message}> Cadastre-se </Text>
+                <Text style={styles.message}> {t('Cadastre-se')} </Text>
             </Animatable.View>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title}>Email de acesso</Text>
+                <Text style={styles.title}>{t('Email de acesso')}</Text>
                     <TextInput
                         placeholder="Digite um email..."
                         style={styles.input} />
 
-                <Text style={styles.title}>Senha</Text>
+                <Text style={styles.title}>{t('Senha')}</Text>
                     <TextInput
                         placeholder="Sua senha"
                         style={styles.input} />
 
-                <Text style={styles.title}>Número para contato</Text>
+                <Text style={styles.title}>{t('Número para contato')}</Text>
                     <TextInput
                         placeholder="Ex: (55) 0 1234-5678"
                         style={styles.input} />
 
                     <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>Cadastrar</Text>
+                        <Text style={styles.buttonText}>{t('Cadastrar')}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity 
                     style={styles.buttonRegister}
                     onPress={() => navigation.navigate('SignIn')}
                     >
-                        <Text style={styles.registerText}>Já possui uma conta? Acesse já!</Text>
+                        <Text style={styles.registerText}>{t('Já possui uma conta? Acesse já!')}</Text>
                     </TouchableOpacity>
 
                 </Animatable.View>
