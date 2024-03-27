@@ -38,15 +38,14 @@ Ordem | Nome | Matrícula
 
 ## Step by Step
 
-`Clone este repositório na sua IDE`
-
-Navegue até o diretório da pasta (cd App) e no terminal cole o comando abaixo para instalar as dependências da aplicação
+1. Clone este repositório na sua IDE;
+2. Navegue até o diretório da pasta (cd App) e no terminal cole o comando abaixo para instalar as dependências da aplicação;
 
 `npm install`
 
-Após instalado as dependências basta rodar a aplicação com o comando abaixo
+3. Após instalada as dependências basta rodar a aplicação com o comando abaixo:
 
-`npm start`
+`npm start` ou `npx expo start`
 
 ## Referências
 
