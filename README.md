@@ -15,10 +15,10 @@ Visamos objetivar um aplicativo chamado **"Pet Help"** que visa oferecer as fun�
 ## Etapas do desenvolvimento 
 
 - [X] 1° Apresentação em sala;
-- [ ] Prototipação do aplicativo;
-- [ ] Tela de apresentação do aplicativo;
-- [ ] Tela de login / esqueci a senha;
-- [ ] Tela de registro (usuário e colaborador);
+- [X] Prototipação do aplicativo;
+- [X] Tela de apresentação do aplicativo;
+- [X] Tela de login / esqueci a senha;
+- [X] Tela de registro (usuário e colaborador);
 - [ ] Vincular a aplicação com banco de dados;
 - [ ] Criar uma autenticação de acesso;
 - [ ] Tela de acesso inicial (Após o login);
@@ -35,6 +35,18 @@ Ordem | Nome | Matrícula
 5. Matheus Artur da Silva Santos | 01573682;
 6. Matheus José dos Santos Silva | 01597670;
 7. Rebecca Costa Florêncio Wanderley | 0159073.
+
+## Step by Step
+
+`Clone este repositório na sua IDE`
+
+Navegue até o diretório da pasta (cd App) e no terminal cole o comando abaixo para instalar as dependências da aplicação
+
+`npm install`
+
+Após instalado as dependências basta rodar a aplicação com o comando abaixo
+
+`npm start`
 
 ## Referências
 

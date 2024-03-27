@@ -14,7 +14,7 @@ import {useNavigation} from '@react-navigation/native'
 import i18n from "../../utils/i18n";
 import { useTranslation } from "react-i18next";
 
-export default function Register() {w
+export default function Register() {
     const navigation = useNavigation();
     const {t, i18n} = useTranslation();
 
